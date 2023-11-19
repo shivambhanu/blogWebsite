@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="row">
+    {% for blog in blogs %}
+    <div class="col">
+        <div class="card" style="width: 20rem;">
+            <img src="static/{{blog.author}}.jpg" class="card-img-top" style="height: 370px;">
+            <div class="card-body">
+                <h5 class="card-title">{{blog.author}}</h5>
+                <p class="card-text">{{blog.about}}</p>
+                <a href="{% url 'single_blog_view' author=blog.author %}" class="btn btn-primary">Blog</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

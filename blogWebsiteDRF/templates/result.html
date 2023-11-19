@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>{{ blog.author }} </h2>
-<h5> {{ blog.content }} </h5>
+    <div class=container>
+        <h2>{{ blog.author }} </h2>
+        <h6> {{ blog.content }} </h6>
+    </div>
+    
 {% endblock %}
