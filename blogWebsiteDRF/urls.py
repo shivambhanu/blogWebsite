@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from rest_framework.authtoken.views import obtain_auth_token
+
 
 urlpatterns = [
     # path('', views.home_view, name='home_view'),
@@ -10,4 +12,5 @@ urlpatterns = [
     path('api/update/<str:pk>', views.UpdateBlogView.as_view(), name='UpdateBlogView'),
     path('retreive-blog', views.get_blog_view, name='get_blog_view'),
     path('single-blog/<str:author>', views.single_blog_view, name='single_blog_view'),
+    path('api/groups/manager/users', views.managers),
 ]
